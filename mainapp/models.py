@@ -77,6 +77,3 @@ class Order(models.Model):
         product.quantity -= self.quantity
         product.save()
         super().save(*args, **kwargs)
-
-        
- 

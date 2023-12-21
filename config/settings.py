@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-l7jc%ktkjl#$(8yvm2^8a83bkc6@ra8)d7y#c&pi#n7t=xuk@t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['asilbek.firstcoders.ru','localhost:3000', 'localhost:8000', '127.0.0.1']
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -132,3 +131,67 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#cors header
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-custom-header',  # Add your custom header here
+    'x-requested-with',
+]
+
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'https://d716-185-139-138-222.ngrok-free.app',
+    'https://localhost:3000',
+    'http://localhost:3000',
+    'https://localhost:8080',
+    'http://localhost:8080',
+    'https://localhost:8000',
+    'http://localhost:8000',
+    'https://bozorboy.vercel.app',
+    'http://bozorboy.vercel.app',
+    'http://vercel.app',
+    'https://vercell.app',
+    'http://54.168.60.63',
+    'http://asilbek.firstcoders.ru', 
+]
+
+
+CORS_ALLOWED_ORIGINS = [
+    'https://d716-185-139-138-222.ngrok-free.app',
+    "https://bozorboy.vercel.app",
+    'https://localhost:3000',
+    'http://localhost:3000',
+    'https://localhost:8080',
+    'http://localhost:8080',
+    'https://localhost:8000',
+    'http://localhost:8000',
+    'https://bozorboy.vercel.app',
+    'http://bozorboy.vercel.app',
+    'http://vercel.app',
+    'https://vercell.app',
+    'http://54.168.60.63',
+    'http://asilbek.firstcoders.ru', 
+]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://d716-185-139-138-222.ngrok-free.app',
+    'https://bozorboy.vercel.app',
+    'http://bozorboy.vercel.app',
+    'http://54.168.60.63',
+    'https://localhost:3000',
+    'http://localhost:3000',
+    'http://vercel.app',
+    'https://vercell.app',
+    'http://asilbek.firstcoders.ru', 
+]
